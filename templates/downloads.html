@@ -11,11 +11,12 @@
         <h1>Available Downloads</h1>
         {% if versions %}
             <ul class="downloads-list">
-                {% for version in versions %}
                     <li>
-                        <a href="{{ url_for('download_file', filename=version) }}" download>{{ version }}</a>
+                        <a href="https://github.com/Prompt-bit/bitcode/releases/download/v1.0.0/BitcodeIDE-1.0.0.msi" download></a>
+                        <a href="https://github.com/Prompt-bit/bitcode/releases/download/v1.0.0/BitcodeIDE-2.20.29.msi" download></a>
+                        <a href="https://github.com/Prompt-bit/bitcode/releases/download/v1.0.0/BitcodeIDE-3.0.0.msi" download></a>
+                        <a href="https://github.com/Prompt-bit/bitcode/releases/download/v1.0.0/BitcodeIDE-4.0.0.msi" download></a>
                     </li>
-                {% endfor %}
             </ul>
         {% else %}
             <p class="support-text">No downloads are available right now. Please check back later.</p>
