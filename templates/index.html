@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='bitcode.png') }}" type="image/png">
+    <title>Bitcode - Bring your ideas to life with coding</title>
+</head>
+<body>
+    <div class="page-shell">
+        <h1 class="title">Bitcode</h1>
+        <p class="subtitle">Bring your ideas to life with coding. Install the latest Windows IDE build for fast startup, modern tools, and polished developer workflows.</p>
+        <div class="actions">
+            <a class="download-btn" href="{{ url_for('download_file', filename='Bitcode IDE 4.0.0.msi') }}" download>
+                Download Latest For Windows (×64)
+            </a>
+            <a class="secondary-link" href="{{ url_for('downloads') }}">View all downloads</a>
+        </div>
+    </div>
+</body>
+</html>

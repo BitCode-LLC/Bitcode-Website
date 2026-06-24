@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Bitcode Downloads</title>
+</head>
+<body>
+    <div class="page-shell downloads-page">
+        <h1>Available Downloads</h1>
+        {% if versions %}
+            <ul class="downloads-list">
+                {% for version in versions %}
+                    <li>
+                        <a href="{{ url_for('download_file', filename=version) }}" download>{{ version }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="support-text">No downloads are available right now. Please check back later.</p>
+        {% endif %}
+        <p><a class="footer-link" href="{{ url_for('index') }}">Back to home</a></p>
+    </div>
+</body>
+</html>
